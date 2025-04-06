@@ -1,0 +1,27 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /kevincell/
+
+# If the request is not for a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all requests to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^([^/]+)/([^/]+)/?$ index.php?controller=$1&action=$2 [QSA,L]
+RewriteRule ^([^/]+)/?$ index.php?controller=$1 [QSA,L]
+
+# Prevent direct access to .php files in these directories
+RewriteRule ^(config|models|controllers)/ - [F]
+
+# Prevent access to .env, .git and other sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Secure sensitive files
+<FilesMatch "\.(ini|log|config.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
