@@ -1,6 +1,6 @@
 # KevinCell - Sistema de Gestión de Tienda Celular
 
-![KevinCell Logo](assets/img/logo.png)
+  ![KevinCell Logo](assets/img/logo.png)
 
 ## 📱 Descripción
 Sistema web para la gestión de una tienda de celulares y accesorios. Permite el control de inventario, clientes, y sistema de créditos con seguimiento de abonos.
