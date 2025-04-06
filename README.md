@@ -40,4 +40,4 @@ Sistema web para la gestión de una tienda de celulares y accesorios. Permite el
 ## 📦 Instalación
 1. Clonar el repositorio en la carpeta htdocs de XAMPP:
 ```bash
-git clone 
+[git clone ](https://github.com/TerryBRC/kevincellproyect.git)
