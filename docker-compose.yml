@@ -1,0 +1,20 @@
+services:
+  kevincell:
+    image: tomsik68/xampp:8
+    ports:
+      - "80:80"
+      - "3307:3306"
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/lampp/htdocs/kevincell
+    restart: always
+    command: >
+      /bin/bash -c "
+      chmod 755 /opt/lampp/htdocs/kevincell &&
+      /opt/lampp/lampp startapache &&
+      /opt/lampp/lampp startmysql &&
+      tail -f /opt/lampp/logs/php_error_log"
+
+volumes:
+  mysql_data:

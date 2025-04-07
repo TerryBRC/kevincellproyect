@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>KevinCell - Sistema de Créditos</title>
+    <link rel="icon" type="image/png" href="/kevincell/assets/img/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css" rel="stylesheet">
 </head>

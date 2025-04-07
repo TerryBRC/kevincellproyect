@@ -1,16 +1,17 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $database_name = "kevincell_db";
+    private $port = "3307";
+    private $db_name = "kevincell_db";
     private $username = "root";
-    private $password = "root";
+    private $password = "";  // Cambiado a password vacío
     public $conn;
 
     public function getConnection() {
         $this->conn = null;
         try {
             $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->database_name,
+                "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
                 $this->username,
                 $this->password,
                 array(
@@ -25,4 +26,3 @@ class Database {
         return $this->conn;
     }
 }
-?>
